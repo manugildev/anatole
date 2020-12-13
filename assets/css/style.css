@@ -266,6 +266,18 @@ a:active {
     min-height: 100%;
 }
 
+
+.sidebar-container {
+    flex: 1;
+/*  
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+*/
+}
+
+
 .sidebar .logo-title {
     text-align: center;
     padding-top: 240px;
@@ -274,6 +286,8 @@ a:active {
 
 .sidebar .logo-title .description {
     font-size: 14px;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .sidebar .logo-title .logo {
@@ -287,11 +301,11 @@ a:active {
 
 .sidebar .logo-title .title h3 {
     text-transform: uppercase;
-    font-size: 2rem;
+    /*font-size: 2rem;*/
     font-weight: bold;
     letter-spacing: 2px;
     line-height: 1;
-    margin: 1em;
+    margin: 1.5em;
 }
 
 .sidebar .logo-title .title a {
@@ -307,6 +321,7 @@ a:active {
     font-size: 14px;
     text-align: center;
     flex: 7;
+    margin-top: 2em;
 }
 
 .sidebar .social-links i {
@@ -821,8 +836,17 @@ a.btn {
     display: none;
 }
 
-@media screen and (max-width: 960px),
-print {
+@media (min-width: 1300px) {
+    .sidebar {
+        width: 30%;
+        margin-left: 10%;
+    }
+    .content {
+        width: 50%;
+        margin-right: 10%;
+    }
+}
+@media (max-width: 960px) {
     .sidebar {
         width: 100%;
         position: absolute;
@@ -985,7 +1009,7 @@ print {
 	}
 }
 
-@media (min-width: 1921px){
+@media (min-width: 1921px) {
     .content {
         padding-right: 25%;
         width: 35%;
